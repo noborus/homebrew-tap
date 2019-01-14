@@ -1,0 +1,5 @@
+language: ruby
+os: osx
+script:
+- brew tap noborus/trdsql
+- brew install trdsql
