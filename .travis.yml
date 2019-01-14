@@ -1,5 +1,7 @@
 language: ruby
 os: osx
+before_install:
+  - brew update
 script:
 - brew tap noborus/trdsql
 - brew install trdsql
