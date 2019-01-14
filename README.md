@@ -7,4 +7,5 @@ To add this Tap enter the following command:
 
 ```bash
 brew tap noborus/trdsql
+brew install trdsql
 ```
