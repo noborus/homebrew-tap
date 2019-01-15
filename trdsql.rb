@@ -17,6 +17,6 @@ class Trdsql < Formula
   end
 
   test do
-    system "true"
+    system "make", "test"
   end
 end
