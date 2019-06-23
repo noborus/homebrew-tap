@@ -1,5 +1,8 @@
 language: ruby
 os: osx
+osx_image: xcode10
+env:
+  - GO111MODULE=on
 before_install:
   - brew update
 script:

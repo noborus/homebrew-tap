@@ -9,7 +9,6 @@ class Trdsql < Formula
     ENV["GOPATH"] = buildpath
     (buildpath/"src/github.com/noborus/trdsql").install buildpath.children
     cd "src/github.com/noborus/trdsql" do
-      system "dep", "ensure", "-vendor-only"
       system "make", "build"
       bin.install "trdsql"
     end
