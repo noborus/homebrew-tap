@@ -10,7 +10,7 @@ class Trdsql < Formula
     (buildpath/"src/github.com/noborus/trdsql").install buildpath.children
     cd "src/github.com/noborus/trdsql" do
       system "go", "mod", "download"
-      system "make", "build"
+      system "go", "build", "-o", "trdsql", "./cmd/trdsql"
       bin.install "trdsql"
     end
   end
