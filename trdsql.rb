@@ -1,8 +1,8 @@
 class Trdsql < Formula
   desc "Tools for executing SQL queries to CSV, LTSV and JSON"
   homepage "https://github.com/noborus/trdsql/"
-  url "https://github.com/noborus/trdsql/archive/v0.7.2.tar.gz"
-  sha256 "93e19dbd6c0c411988a8dcf72f6555f3c16d9e4540cb743ddece1453cb385fe8"
+  url "https://github.com/noborus/trdsql/archive/v0.7.3.tar.gz"
+  sha256 "3629553295d1f3a4a5a9c4aedef10acec2c6afd2cc274cef9c054867309d7656"
   depends_on "go" => :build
   def install
     ENV["GOPATH"] = buildpath
