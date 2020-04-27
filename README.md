@@ -1,11 +1,16 @@
-# homebrew-trdsql
-### a homebrew tap for trdsql
-
+# homebrew-tap
 ---
 
 To add this Tap enter the following command:
 
+## trdsql
+
 ```bash
-brew tap noborus/trdsql
-brew install trdsql
+brew install noborus/trdsql
+```
+
+## ov
+
+```bash
+brew install noborus/ov
 ```
