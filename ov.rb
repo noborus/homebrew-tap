@@ -2,24 +2,24 @@
 class Ov < Formula
   desc "ov is a feature rich terminal pager."
   homepage "https://github.com/noborus/ov"
-  version "0.3.1"
+  version "0.4.0"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/noborus/ov/releases/download/v0.3.1/ov_0.3.1_darwin_amd64.zip"
-    sha256 "a31961cb5a3507e675b4bb0e7cc0e7bab76745f41896c9edefe161f5a22cf977"
+    url "https://github.com/noborus/ov/releases/download/v0.4.0/ov_0.4.0_darwin_amd64.zip"
+    sha256 "4f053cdb4f5bd8b771544b8b158d8a16851c95ce592510fa7c409a1a964bfcfa"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/noborus/ov/releases/download/v0.3.1/ov_0.3.1_linux_amd64.zip"
-      sha256 "56d950f1a41e5a48b5c30d2eea4b56ba0b5d93a38f3aa117bd81c61e84dce474"
+      url "https://github.com/noborus/ov/releases/download/v0.4.0/ov_0.4.0_linux_amd64.zip"
+      sha256 "5f721189b196739fd4d68e2ad44021f894dbf784cd507c8d9c5ba3ee9e236d40"
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/noborus/ov/releases/download/v0.3.1/ov_0.3.1_linux_arm64.zip"
-        sha256 "0532d1d7cd436a0758dbccec9c91941350198077608a445cc38e8b7e50ac1031"
+        url "https://github.com/noborus/ov/releases/download/v0.4.0/ov_0.4.0_linux_arm64.zip"
+        sha256 "57726ff224946d9bb23bb2d0ff16184d6fe903b87d1781eef4cac016a14c62b4"
       else
-        url "https://github.com/noborus/ov/releases/download/v0.3.1/ov_0.3.1_linux_arm.zip"
-        sha256 "bcea2dc8f371e8f0da4707b03287fe6676b330774f12efd9b463f8cb9d45d7cd"
+        url "https://github.com/noborus/ov/releases/download/v0.4.0/ov_0.4.0_linux_arm.zip"
+        sha256 "94120edd06cf6215f898d5b3755168cb58409925fb8c4061029557ca53a009c1"
       end
     end
   end
