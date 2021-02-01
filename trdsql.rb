@@ -13,6 +13,10 @@ class Trdsql < Formula
   end
 
   def install
-      bin.install "trdsql"
+    bin.install "trdsql"
+  end
+
+  test do
+    assert_equal "3\n", pipe_output("#{bin}/trdsql 'select count(*) from -'", "a\nb\nc\n")
   end
 end
