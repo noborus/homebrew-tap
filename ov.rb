@@ -5,24 +5,28 @@
 class Ov < Formula
   desc "Feature rich terminal pager"
   homepage "https://github.com/noborus/ov"
-  version "0.8.1"
+  version "0.8.9"
   bottle :unneeded
 
-  if OS.mac?
-    url "https://github.com/noborus/ov/releases/download/v0.8.1/ov_0.8.1_darwin_amd64.zip"
-    sha256 "9d32a3232c04be8a10d1b77ffe3db12acdfb8d61cda4f71a8e8cd767f66ef298"
+  if OS.mac? && Hardware::CPU.intel?
+    url "https://github.com/noborus/ov/releases/download/v0.8.9/ov_0.8.9_darwin_amd64.zip"
+    sha256 "33b60da5c106de156889bd3603e0a22ad42403a63f64b09bdd358799a15d03e0"
+  end
+  if OS.mac? && Hardware::CPU.arm?
+    url "https://github.com/noborus/ov/releases/download/v0.8.9/ov_0.8.9_darwin_arm64.zip"
+    sha256 "1d78b41809f5687f75ca780f9e9b0d2a73d652fa5d2c12b8099e6a57813ff10f"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/noborus/ov/releases/download/v0.8.1/ov_0.8.1_linux_amd64.zip"
-    sha256 "c024a74f3ebda38b7c19e41e2d546806cd05e738121972e1600b709e6b8ebd9f"
+    url "https://github.com/noborus/ov/releases/download/v0.8.9/ov_0.8.9_linux_amd64.zip"
+    sha256 "f605d5a85da8210484946781f711396d0ba609845f139a094505b0b4ae6c6413"
   end
   if OS.linux? && Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-    url "https://github.com/noborus/ov/releases/download/v0.8.1/ov_0.8.1_linux_arm.zip"
-    sha256 "531e2b4798372bfe9baa485e4a4621d797f7f2f482e5fe5f1d675a91934a90ae"
+    url "https://github.com/noborus/ov/releases/download/v0.8.9/ov_0.8.9_linux_arm.zip"
+    sha256 "7137ef5105ff6c56a11193c2e9f7df373a378663b02748f3074fb2962fbb5c7b"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/noborus/ov/releases/download/v0.8.1/ov_0.8.1_linux_arm64.zip"
-    sha256 "dbb4d3f67acd70a28f9d5d151a772fa99bbbcae5a7bfc6b2b1ef0b62b88daaff"
+    url "https://github.com/noborus/ov/releases/download/v0.8.9/ov_0.8.9_linux_arm64.zip"
+    sha256 "ed990104407ce5f872df870022034529a548b18310de48f83b98e657f3680aa5"
   end
 
   def install
