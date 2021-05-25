@@ -5,28 +5,28 @@
 class Ov < Formula
   desc "Feature rich terminal pager"
   homepage "https://github.com/noborus/ov"
-  version "0.9.0"
+  version "0.9.1"
   bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/noborus/ov/releases/download/v0.9.0/ov_0.9.0_darwin_amd64.zip"
-    sha256 "419e74a6542d4103c8c4f26427b85d556c8ebae2aa621bcc14539e895732fdfd"
+    url "https://github.com/noborus/ov/releases/download/v0.9.1/ov_0.9.1_darwin_amd64.zip"
+    sha256 "b7f13e8b06e7cb833914e0c7143d20626e9688aa905bae335a5e6726593f01ee"
   end
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/noborus/ov/releases/download/v0.9.0/ov_0.9.0_darwin_arm64.zip"
-    sha256 "db94d7724ef52d688c0385a958ccad041be6da06eeb1753e90e07426fe3baf46"
+    url "https://github.com/noborus/ov/releases/download/v0.9.1/ov_0.9.1_darwin_arm64.zip"
+    sha256 "f9a6bc4e70092dfcdec85bb348227e649604f34b5f1691d6092f930d56381e55"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/noborus/ov/releases/download/v0.9.0/ov_0.9.0_linux_amd64.zip"
-    sha256 "b6a1857454eb8d6eee7684d116db09e1978f17d8223c5c423640583a825786f0"
+    url "https://github.com/noborus/ov/releases/download/v0.9.1/ov_0.9.1_linux_amd64.zip"
+    sha256 "714382395324759b8f86ef35e0debbf3a90aa805c32ad83b62c973b776484d13"
   end
   if OS.linux? && Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-    url "https://github.com/noborus/ov/releases/download/v0.9.0/ov_0.9.0_linux_arm.zip"
-    sha256 "61a3781a2038379fd1bd92e377694edeebb76d261075b210e9e5d74f919cb7a4"
+    url "https://github.com/noborus/ov/releases/download/v0.9.1/ov_0.9.1_linux_arm.zip"
+    sha256 "b0e6e1b83405b97c39688c5b448678e42d7a7d04bbc3d167debf64fa3207f181"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/noborus/ov/releases/download/v0.9.0/ov_0.9.0_linux_arm64.zip"
-    sha256 "e724e6481e533e525be36592ecfeb34fb8376e8009103becbf882d8d0a15fe25"
+    url "https://github.com/noborus/ov/releases/download/v0.9.1/ov_0.9.1_linux_arm64.zip"
+    sha256 "a884029a1082b9786dd1ca0fe49447e905e91e1d5970932dc2c6c6cbfa599c88"
   end
 
   def install
