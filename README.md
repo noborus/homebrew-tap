@@ -14,3 +14,15 @@ brew install noborus/trdsql
 ```bash
 brew install noborus/ov
 ```
+
+## ovcs
+
+```bash
+brew install noborus/ovcs
+```
+
+## pgsp
+
+```bash
+brew install noborus/pgsp
+```

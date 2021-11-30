@@ -5,32 +5,32 @@
 class Pgsp < Formula
   desc "PostgreSQL Stat Progress CLI Monitor"
   homepage "https://github.com/noborus/pgsp"
-  version "0.0.1"
+  version "0.0.2"
   bottle :unneeded
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/noborus/pgsp/releases/download/v0.0.1/pgsp_0.0.1_darwin_amd64.zip"
-      sha256 "bbeab66b5c9df36a831c84dc6f006741230fb20d110bdc52cf79609fdf5acd18"
-    end
     if Hardware::CPU.arm?
-      url "https://github.com/noborus/pgsp/releases/download/v0.0.1/pgsp_0.0.1_darwin_arm64.zip"
-      sha256 "c6fbc2e6eb89598ae6e768c66c5a5a5384765f4f3e14d30b5cefa12d78c42348"
+      url "https://github.com/noborus/pgsp/releases/download/v0.0.2/pgsp_0.0.2_darwin_arm64.zip"
+      sha256 "fdf8abbe115f211d7c9dcfce593b4890f806f00e1f9eba3b734e76eed1f28f24"
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/noborus/pgsp/releases/download/v0.0.2/pgsp_0.0.2_darwin_amd64.zip"
+      sha256 "b3ae5ecafea1d8a5cfba2baefc1a1751d8e0cd57d7c31b9b122524d9ce9070d8"
     end
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/noborus/pgsp/releases/download/v0.0.1/pgsp_0.0.1_linux_amd64.zip"
-      sha256 "ee99dcfa5d5d767b39f0249deb5891f87f3eecbe4c4972274656b935631e0d81"
-    end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/noborus/pgsp/releases/download/v0.0.1/pgsp_0.0.1_linux_arm.zip"
-      sha256 "c180d4adcd246d54cf98bbbf24c2eb28fcde7e788a3c48279cbe9ff623b8c46e"
+      url "https://github.com/noborus/pgsp/releases/download/v0.0.2/pgsp_0.0.2_linux_arm.zip"
+      sha256 "7da9b5f539f7cdadfe845aaf93a0424c6e82b248c8f946823a46109cc9d8e941"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/noborus/pgsp/releases/download/v0.0.1/pgsp_0.0.1_linux_arm64.zip"
-      sha256 "8ce3bebe6f73ee6ce053c68a7fb8aaac565183b68bdc56098fa2b478099d73e6"
+      url "https://github.com/noborus/pgsp/releases/download/v0.0.2/pgsp_0.0.2_linux_arm64.zip"
+      sha256 "12cc9fd52711b65543b790cec8a312176af56691bb4096462613e7187c46f059"
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/noborus/pgsp/releases/download/v0.0.2/pgsp_0.0.2_linux_amd64.zip"
+      sha256 "b67bfac71cbc20f8b2bfb9b441388d4aef65e89488f1c492605fe7e6ee422ec6"
     end
   end
 
