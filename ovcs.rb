@@ -5,32 +5,52 @@
 class Ovcs < Formula
   desc "Feature rich terminal pager"
   homepage "https://github.com/noborus/ovcs"
-  version "0.9.0"
-  bottle :unneeded
+  version "0.9.5"
 
-  if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/noborus/ovcs/releases/download/v0.9.0/ovcs_0.9.0_darwin_amd64.zip"
-    sha256 "1c7dde74f9f82627a0ecc2ff00fc6daed31bac1757556085486c06ff483e3349"
-  end
-  if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/noborus/ovcs/releases/download/v0.9.0/ovcs_0.9.0_darwin_arm64.zip"
-    sha256 "145fc6b3af6cbdb543452b20bb8b2a465835692271f65248c5667ff617d12ebb"
-  end
-  if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/noborus/ovcs/releases/download/v0.9.0/ovcs_0.9.0_linux_amd64.zip"
-    sha256 "2b88936c6aa84c5bf9501b892b3706db4e2da91e9b02f78e76a438cd01bb28a0"
-  end
-  if OS.linux? && Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-    url "https://github.com/noborus/ovcs/releases/download/v0.9.0/ovcs_0.9.0_linux_arm.zip"
-    sha256 "6b03aac8a454071312c517875102950fdee5b1d82d8ff6a88c1cf6bfbd015502"
-  end
-  if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/noborus/ovcs/releases/download/v0.9.0/ovcs_0.9.0_linux_arm64.zip"
-    sha256 "8a8d7c716dd6566e50a91ae4fa58b12d3bc5a2818c58a0a117d2d8f4cdf19bba"
+  on_macos do
+    if Hardware::CPU.arm?
+      url "https://github.com/noborus/ovcs/releases/download/v0.9.5/ovcs_0.9.5_darwin_arm64.zip"
+      sha256 "fb58260524231e1e398662801d581a01b96818750b9c68bd679121b7148783f2"
+
+      def install
+        bin.install "ovcs"
+      end
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/noborus/ovcs/releases/download/v0.9.5/ovcs_0.9.5_darwin_amd64.zip"
+      sha256 "8f7a766a9bf2a73724cd0114e679dadfcf24c96dd92b8117cd7f538e65164220"
+
+      def install
+        bin.install "ovcs"
+      end
+    end
   end
 
-  def install
-    bin.install "ovcs"
+  on_linux do
+    if Hardware::CPU.intel?
+      url "https://github.com/noborus/ovcs/releases/download/v0.9.5/ovcs_0.9.5_linux_amd64.zip"
+      sha256 "99ef8c5199429a4f7bd30756a3e8c2989d187395b181818ec5a3e8bbd346a55b"
+
+      def install
+        bin.install "ovcs"
+      end
+    end
+    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
+      url "https://github.com/noborus/ovcs/releases/download/v0.9.5/ovcs_0.9.5_linux_arm.zip"
+      sha256 "4b124ef855e74c54151bf63634b4736fe9361cac0f15211a8dfbbfe2dc5c9757"
+
+      def install
+        bin.install "ovcs"
+      end
+    end
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/noborus/ovcs/releases/download/v0.9.5/ovcs_0.9.5_linux_arm64.zip"
+      sha256 "768e4e1cf085207c9747c4510a9d20b614a87745efaa5ce61a4913823b295395"
+
+      def install
+        bin.install "ovcs"
+      end
+    end
   end
 
   test do
