@@ -2,7 +2,6 @@ class Trdsql < Formula
   desc "Tools for executing SQL queries to CSV, LTSV and JSON"
   homepage "https://github.com/noborus/trdsql/"
   version "0.9.1"
-  bottle :unneeded
 
   if OS.mac?
     url "https://github.com/noborus/trdsql/releases/download/v0.9.1/trdsql_v0.9.1_darwin_amd64.zip"
