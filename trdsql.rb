@@ -1,15 +1,15 @@
 class Trdsql < Formula
   desc "Tools for executing SQL queries to CSV, LTSV and JSON"
   homepage "https://github.com/noborus/trdsql/"
-  version "0.9.0"
+  version "0.9.1"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/noborus/trdsql/releases/download/v0.9.0/trdsql_v0.9.0_darwin_amd64.zip"
-    sha256 "3eaefdba959a872a1e5caf10ed4884163491ef4f6f37401c72b8026ea19bd1fc"
+    url "https://github.com/noborus/trdsql/releases/download/v0.9.1/trdsql_v0.9.1_darwin_amd64.zip"
+    sha256 "b154e0cac68d864c3607cf79470594cd4c918c976fbe7cc9d7d1f46151e9f966"
   elsif OS.linux?
-    url "https://github.com/noborus/trdsql/releases/download/v0.9.0/trdsql_v0.9.0_linux_amd64.zip"
-    sha256 "30c0e6cdcc836d83e8a9230061b6dc4315aa94ebcf8b5d38e9bda3fe6115aa44"
+    url "https://github.com/noborus/trdsql/releases/download/v0.9.1/trdsql_v0.9.1_linux_amd64.zip"
+    sha256 "f8883e94905a2e32e8df589ae09e00f7cbdfb1937683852852626467e2b9582c"
   end
 
   def install
