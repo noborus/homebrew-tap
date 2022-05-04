@@ -7,6 +7,9 @@ class Trdsql < Formula
     if Hardware::CPU.arm?
       url "https://github.com/noborus/trdsql/releases/download/v0.10.0/trdsql_v0.10.0_darwin_arm64.zip"
       sha256 "803678fdbca6faed6da25fc02ba6caba0dba81d612781ba388728901853e12ab"
+      def install
+        bin.install "trdsql"
+      end
     end
     if Hardware::CPU.intel?
       url "https://github.com/noborus/trdsql/releases/download/v0.10.0/trdsql_v0.10.0_darwin_amd64.zip"
@@ -14,6 +17,7 @@ class Trdsql < Formula
       def install
         bin.install "trdsql"
       end
+    end
   end
 
   on_linux do
@@ -28,7 +32,6 @@ class Trdsql < Formula
     if Hardware::CPU.intel?
       url "https://github.com/noborus/trdsql/releases/download/v0.10.0/trdsql_v0.10.0_linux_amd64.zip"
       sha256 "b1a4a1d2700870f2ba201cdad1e23d92b16c3c2fea8977a783dd1662500cf37a"
-
       def install
         bin.install "trdsql"
       end
