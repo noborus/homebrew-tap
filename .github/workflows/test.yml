@@ -16,3 +16,4 @@ jobs:
         run: |
           ls *.rb | xargs -n 1 brew install --formula --build-from-source
           trdsql -version
+          ls |trdsql -oat "SELECT * FROM -"
