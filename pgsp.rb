@@ -5,20 +5,20 @@
 class Pgsp < Formula
   desc "PostgreSQL Stat Progress CLI Monitor"
   homepage "https://github.com/noborus/pgsp"
-  version "0.0.3"
+  version "0.0.5"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/noborus/pgsp/releases/download/v0.0.3/pgsp_0.0.3_darwin_amd64.zip"
-      sha256 "20a0a662d61f15e49cda03402eab31c6f4d06da02e9c8c904f3a8aeab962bfa1"
+      url "https://github.com/noborus/pgsp/releases/download/v0.0.5/pgsp_0.0.5_darwin_amd64.zip"
+      sha256 "d4d97cc6577ad0389a7ae9242928286679fe9acb24a71d1b0a444104e20e6f92"
 
       def install
         bin.install "pgsp"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/noborus/pgsp/releases/download/v0.0.3/pgsp_0.0.3_darwin_arm64.zip"
-      sha256 "84559fee74c195ed69add4a9cfb187fc7395e6f0810761578709a7da1ef83fe0"
+      url "https://github.com/noborus/pgsp/releases/download/v0.0.5/pgsp_0.0.5_darwin_arm64.zip"
+      sha256 "ad22e8a8dcc42e75a412390cd9ac6abb64191cc2879459940142bad3e00ed378"
 
       def install
         bin.install "pgsp"
@@ -27,25 +27,25 @@ class Pgsp < Formula
   end
 
   on_linux do
+    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
+      url "https://github.com/noborus/pgsp/releases/download/v0.0.5/pgsp_0.0.5_linux_arm.zip"
+      sha256 "efb71d8dbc3db04ea5eb0171eb97d54362b6ddd0f0ec29384a2a67cac6c6f1f4"
+
+      def install
+        bin.install "pgsp"
+      end
+    end
     if Hardware::CPU.intel?
-      url "https://github.com/noborus/pgsp/releases/download/v0.0.3/pgsp_0.0.3_linux_amd64.zip"
-      sha256 "8224757a7b4578026643f9616a3df3c3df907ab929b8021ae675095911f282a1"
+      url "https://github.com/noborus/pgsp/releases/download/v0.0.5/pgsp_0.0.5_linux_amd64.zip"
+      sha256 "c661b7b8022f8712b623469180255799b01beb7acc2d454530f696ed42cb1d1e"
 
       def install
         bin.install "pgsp"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/noborus/pgsp/releases/download/v0.0.3/pgsp_0.0.3_linux_arm64.zip"
-      sha256 "f75f2cd7fefb3157a23b25344f525c23bdd544484bea585035f09995b885423e"
-
-      def install
-        bin.install "pgsp"
-      end
-    end
-    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/noborus/pgsp/releases/download/v0.0.3/pgsp_0.0.3_linux_arm.zip"
-      sha256 "3249e9747ec639daea85b3bcdfcdffcb7f631ab02d38d6b980e528b95d294f6d"
+      url "https://github.com/noborus/pgsp/releases/download/v0.0.5/pgsp_0.0.5_linux_arm64.zip"
+      sha256 "318eda884e57a864245a0567874d9e9269b3a0487aaaf63b957a3469a7d453ab"
 
       def install
         bin.install "pgsp"
