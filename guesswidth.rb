@@ -5,20 +5,20 @@
 class Guesswidth < Formula
   desc ""
   homepage ""
-  version "0.3.2"
+  version "0.3.4"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/noborus/guesswidth/releases/download/v0.3.2/guesswidth_0.3.2_Darwin_arm64.tar.gz"
-      sha256 "624a4af7f33cdb749100b537be8e334b66af8350432b34685125b300e6ba8bb8"
+      url "https://github.com/noborus/guesswidth/releases/download/v0.3.4/guesswidth_0.3.4_Darwin_ARM64.tar.gz"
+      sha256 "6cc619f5a7b9af157e75b2bd7a0191a423fecf044c79882da17f0ce10d7e9af6"
 
       def install
         bin.install "guesswidth"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/noborus/guesswidth/releases/download/v0.3.2/guesswidth_0.3.2_Darwin_x86_64.tar.gz"
-      sha256 "edc22aa6f33e810aaf08a3b48579c7ce794888f470b53f272fda41b268487c2d"
+      url "https://github.com/noborus/guesswidth/releases/download/v0.3.4/guesswidth_0.3.4_Darwin_64bit.tar.gz"
+      sha256 "c3bf7b0f23f5e73c8567b5dafa79c4c138afc13de4460b86220a49baf889f39d"
 
       def install
         bin.install "guesswidth"
@@ -27,17 +27,17 @@ class Guesswidth < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/noborus/guesswidth/releases/download/v0.3.2/guesswidth_0.3.2_Linux_arm64.tar.gz"
-      sha256 "04d88d31a442853ef1db02a077bcce4777c8dd775fc22b5ad162b54e585134e7"
+    if Hardware::CPU.intel?
+      url "https://github.com/noborus/guesswidth/releases/download/v0.3.4/guesswidth_0.3.4_Linux_64bit.tar.gz"
+      sha256 "f7b931bd8a61d59e781a012f0d05bcc9fc5afd93e65015d98a9c32eaf5bdf50f"
 
       def install
         bin.install "guesswidth"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/noborus/guesswidth/releases/download/v0.3.2/guesswidth_0.3.2_Linux_x86_64.tar.gz"
-      sha256 "6228bd6cc7e4d01c143a64b37b30633b10bf16f304c644005dd53150213dafa3"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/noborus/guesswidth/releases/download/v0.3.4/guesswidth_0.3.4_Linux_ARM64.tar.gz"
+      sha256 "9e3570540eb6a75bad8bbbb3ee5d5a5ac7462db503b31e28c003297a9d933843"
 
       def install
         bin.install "guesswidth"
