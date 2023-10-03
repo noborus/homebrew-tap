@@ -5,7 +5,7 @@ class Trdsql < Formula
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/noborus/trdsql/releases/download/v0.12.0/trdsql_v0.12.0_darwin_amd64.zip"
+      url "https://github.com/noborus/trdsql/releases/download/v0.12.0/trdsql_v0.12.0_darwin_arm64.zip"
       sha256 "fa033118104e50989a52d004e42b0f4eb9936b317dc650322732c254a8b6c9a2"
       def install
         bin.install "trdsql"
