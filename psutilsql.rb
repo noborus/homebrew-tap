@@ -10,7 +10,7 @@ class Psutilsql < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/noborus/psutilsql/releases/download/v0.0.4-pre3/psutilsql_Darwin_x86_64.tar.gz"
-      sha256 "3107793a4795f37d5f1c04946d10763b9ceb8da984e35a956c6de105c6ffb11a"
+      sha256 "73699725ee7b2cfb2d28987fc43d2de9998f3808b0380323d678a346f0d3515c"
 
       def install
         bin.install "psutilsql"
@@ -18,7 +18,7 @@ class Psutilsql < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/noborus/psutilsql/releases/download/v0.0.4-pre3/psutilsql_Darwin_arm64.tar.gz"
-      sha256 "81e9b3964f1aceb1b9f825e0d409243673fc8e5a3545a1f6cdc2c3eb2415552e"
+      sha256 "a448ddea3e9d6f465971347619d167805361e763f099fc767a505a7a43e77a40"
 
       def install
         bin.install "psutilsql"
@@ -27,17 +27,17 @@ class Psutilsql < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/noborus/psutilsql/releases/download/v0.0.4-pre3/psutilsql_Linux_arm64.tar.gz"
-      sha256 "f55673b60e15af5ec830373e0141b7a0104d9163a3f188caaee5995758927913"
+    if Hardware::CPU.intel?
+      url "https://github.com/noborus/psutilsql/releases/download/v0.0.4-pre3/psutilsql_Linux_x86_64.tar.gz"
+      sha256 "08279146fe1d075c3c720726603ab4309d609a7fa41403a71c2a6f494e474548"
 
       def install
         bin.install "psutilsql"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/noborus/psutilsql/releases/download/v0.0.4-pre3/psutilsql_Linux_x86_64.tar.gz"
-      sha256 "8ce79f5199ee57e84e113e5839e03b64016b965728686edcc27c79be079914b9"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/noborus/psutilsql/releases/download/v0.0.4-pre3/psutilsql_Linux_arm64.tar.gz"
+      sha256 "c58305d2b224858fb962d552159e5cfae7e4b6b4a9b799f511867673702b0d95"
 
       def install
         bin.install "psutilsql"
