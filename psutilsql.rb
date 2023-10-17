@@ -5,20 +5,20 @@
 class Psutilsql < Formula
   desc "CLI tool that can be processed by SQL using"
   homepage "https://github.com/noborus/psutilsql"
-  version "0.0.4-pre3"
+  version "0.0.5"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/noborus/psutilsql/releases/download/v0.0.4-pre3/psutilsql_Darwin_x86_64.tar.gz"
-      sha256 "73699725ee7b2cfb2d28987fc43d2de9998f3808b0380323d678a346f0d3515c"
+      url "https://github.com/noborus/psutilsql/releases/download/v0.0.5/psutilsql_Darwin_x86_64.tar.gz"
+      sha256 "90d53971867240ec0ba5d8c5f1b1c71ad9c1d37d04eae2cfbe48a941fc113065"
 
       def install
         bin.install "psutilsql"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/noborus/psutilsql/releases/download/v0.0.4-pre3/psutilsql_Darwin_arm64.tar.gz"
-      sha256 "a448ddea3e9d6f465971347619d167805361e763f099fc767a505a7a43e77a40"
+      url "https://github.com/noborus/psutilsql/releases/download/v0.0.5/psutilsql_Darwin_arm64.tar.gz"
+      sha256 "9da2c6ca8c7ae64fd3a48651341ca4c0d746e40e913e4299fafe6b3e941aaf79"
 
       def install
         bin.install "psutilsql"
@@ -27,17 +27,17 @@ class Psutilsql < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/noborus/psutilsql/releases/download/v0.0.4-pre3/psutilsql_Linux_x86_64.tar.gz"
-      sha256 "08279146fe1d075c3c720726603ab4309d609a7fa41403a71c2a6f494e474548"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/noborus/psutilsql/releases/download/v0.0.5/psutilsql_Linux_arm64.tar.gz"
+      sha256 "72225028e345c0ff723bd6f8450a4ae67480a3f13b2c034fa64f4f9fa7ef0cf5"
 
       def install
         bin.install "psutilsql"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/noborus/psutilsql/releases/download/v0.0.4-pre3/psutilsql_Linux_arm64.tar.gz"
-      sha256 "c58305d2b224858fb962d552159e5cfae7e4b6b4a9b799f511867673702b0d95"
+    if Hardware::CPU.intel?
+      url "https://github.com/noborus/psutilsql/releases/download/v0.0.5/psutilsql_Linux_x86_64.tar.gz"
+      sha256 "4aa708af2b94754b0b4dbe2c329844423a0a9aa8008129fa851fd700c3be12a0"
 
       def install
         bin.install "psutilsql"
