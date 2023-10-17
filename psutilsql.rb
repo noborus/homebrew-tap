@@ -5,13 +5,39 @@
 class Psutilsql < Formula
   desc "CLI tool that can be processed by SQL using"
   homepage "https://github.com/noborus/psutilsql"
-  version "0.0.4-pre2"
-  depends_on :linux
+  version "0.0.4-pre3"
+
+  on_macos do
+    if Hardware::CPU.intel?
+      url "https://github.com/noborus/psutilsql/releases/download/v0.0.4-pre3/psutilsql_Darwin_x86_64.tar.gz"
+      sha256 "3107793a4795f37d5f1c04946d10763b9ceb8da984e35a956c6de105c6ffb11a"
+
+      def install
+        bin.install "psutilsql"
+      end
+    end
+    if Hardware::CPU.arm?
+      url "https://github.com/noborus/psutilsql/releases/download/v0.0.4-pre3/psutilsql_Darwin_arm64.tar.gz"
+      sha256 "81e9b3964f1aceb1b9f825e0d409243673fc8e5a3545a1f6cdc2c3eb2415552e"
+
+      def install
+        bin.install "psutilsql"
+      end
+    end
+  end
 
   on_linux do
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/noborus/psutilsql/releases/download/v0.0.4-pre3/psutilsql_Linux_arm64.tar.gz"
+      sha256 "f55673b60e15af5ec830373e0141b7a0104d9163a3f188caaee5995758927913"
+
+      def install
+        bin.install "psutilsql"
+      end
+    end
     if Hardware::CPU.intel?
-      url "https://github.com/noborus/psutilsql/releases/download/v0.0.4-pre2/psutilsql_0.0.4-pre2_linux_amd64.tar.gz"
-      sha256 "b31b39ba8e7f9f780fb5194603fa5c762f53519c706988964a67ddef97d88de7"
+      url "https://github.com/noborus/psutilsql/releases/download/v0.0.4-pre3/psutilsql_Linux_x86_64.tar.gz"
+      sha256 "8ce79f5199ee57e84e113e5839e03b64016b965728686edcc27c79be079914b9"
 
       def install
         bin.install "psutilsql"
