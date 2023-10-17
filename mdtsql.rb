@@ -5,13 +5,39 @@
 class Mdtsql < Formula
   desc "Execute SQL to markdown table and convert to other format"
   homepage "https://github.com/noborus/mdtsql"
-  version "0.0.5"
-  depends_on :linux
+  version "0.0.6"
+
+  on_macos do
+    if Hardware::CPU.intel?
+      url "https://github.com/noborus/mdtsql/releases/download/v0.0.6/mdtsql_Darwin_x86_64.tar.gz"
+      sha256 "8ee54def7cb9b05abd14e36d25d02bc7aeb4054709f03d17253867b1560f0db2"
+
+      def install
+        bin.install "mdtsql"
+      end
+    end
+    if Hardware::CPU.arm?
+      url "https://github.com/noborus/mdtsql/releases/download/v0.0.6/mdtsql_Darwin_arm64.tar.gz"
+      sha256 "67180e6bfe986ca5c908cefa6e43cb158b8c4f31afe3cb2ddf13cdb3703305fc"
+
+      def install
+        bin.install "mdtsql"
+      end
+    end
+  end
 
   on_linux do
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/noborus/mdtsql/releases/download/v0.0.6/mdtsql_Linux_arm64.tar.gz"
+      sha256 "ec8690bad0e2c0f2d79cf7395366e6a3d04742952613c257f4aee9f666b74dc1"
+
+      def install
+        bin.install "mdtsql"
+      end
+    end
     if Hardware::CPU.intel?
-      url "https://github.com/noborus/mdtsql/releases/download/v0.0.5/mdtsql_0.0.5_linux_amd64.tar.gz"
-      sha256 "ca011547295d47c65c09f56e88e0c750dbc230fc5502c3709822e512317a5d4a"
+      url "https://github.com/noborus/mdtsql/releases/download/v0.0.6/mdtsql_Linux_x86_64.tar.gz"
+      sha256 "feeca8eebc12cd07038cab255d086123ed6212be95d717f0be02d047ced64082"
 
       def install
         bin.install "mdtsql"
