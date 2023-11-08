@@ -1,19 +1,19 @@
 class Trdsql < Formula
   desc "Tools for executing SQL queries to CSV, LTSV, JSON and TBLN"
   homepage "https://github.com/noborus/trdsql/"
-  version  "0.13.0-rc7"
+  version  "0.13.0-rc8"
 
   on_macos do
     if Hardware::CPU.arm?
-      url ""
-      sha256 ""
+      url "https://github.com/noborus/trdsql/releases/download/v0.13.0-rc8/trdsql_v0.13.0-rc8_darwin_arm64.zip"
+      sha256 "3a0d642c80f88a696ae539ad7a30faf16c736bcdd8c9613bb148831049f08242"
       def install
         bin.install "trdsql"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/noborus/trdsql/releases/download/v0.13.0-rc7/trdsql_v0.13.0-rc7_darwin_amd64.zip"
-      sha256 "272f78cd02f8706a227035981c6f456f876c9426da2743cde939c5740eb3f227"
+      url "https://github.com/noborus/trdsql/releases/download/v0.13.0-rc8/trdsql_v0.13.0-rc8_darwin_amd64.zip"
+      sha256 "64d392217f36b083a1eeda23c21004b1c1cd730f58e66726a79c37ad077ccd4d"
       def install
         bin.install "trdsql"
       end
@@ -22,16 +22,16 @@ class Trdsql < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/noborus/trdsql/releases/download/v0.13.0-rc7/trdsql_v0.13.0-rc7_linux_arm64.zip"
-      sha256 "be2ec32603790b145c816b5a96e11decc4e97ef8aa5cc21a6015eeb03def5e65"
+      url "https://github.com/noborus/trdsql/releases/download/v0.13.0-rc8/trdsql_v0.13.0-rc8_linux_arm64.zip"
+      sha256 "2ad1283b55be9e9c6d58ce4fb4180818d81dd2ee12b589788366f0898ae16545"
       def install
         bin.install "trdsql"
       end
     end
 
     if Hardware::CPU.intel?
-      url "https://github.com/noborus/trdsql/releases/download/v0.13.0-rc7/trdsql_v0.13.0-rc7_linux_amd64.zip"
-      sha256 "a7317da6cc907c6af4b04c31060ececb16d4459a8d42048790e8b793bff6fab1"
+      url "https://github.com/noborus/trdsql/releases/download/v0.13.0-rc8/trdsql_v0.13.0-rc8_linux_amd64.zip"
+      sha256 "29ac789dce3a01dcf7dc3cc832b74a645ffa617ebb62e28f16c04d1c31d29e30"
       def install
         bin.install "trdsql"
       end
