@@ -1,19 +1,19 @@
 class Trdsql < Formula
   desc "Tools for executing SQL queries to CSV, LTSV, JSON and TBLN"
   homepage "https://github.com/noborus/trdsql/"
-  version  "0.12.1"
+  version  "0.13.0-rc7"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/noborus/trdsql/releases/download/v0.12.1/trdsql_v0.12.1_darwin_arm64.zip"
-      sha256 "2b58cc00843a8fc105b4befd3d5da7de78d27798bea8e128c45aa0a49cce82fb"
+      url ""
+      sha256 ""
       def install
         bin.install "trdsql"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/noborus/trdsql/releases/download/v0.12.1/trdsql_v0.12.1_darwin_amd64.zip"
-      sha256 "2e2e3d88c5d91d20d1b27da6c0d1b0a03086fd2365daa492192df3b1a7dd3390"
+      url "https://github.com/noborus/trdsql/releases/download/v0.13.0-rc7/trdsql_v0.13.0-rc7_darwin_amd64.zip"
+      sha256 "272f78cd02f8706a227035981c6f456f876c9426da2743cde939c5740eb3f227"
       def install
         bin.install "trdsql"
       end
@@ -22,16 +22,16 @@ class Trdsql < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/noborus/trdsql/releases/download/v0.12.1/trdsql_v0.12.1_linux_arm64.zip"
-      sha256 "086e5121f35a46fabb0c16db1dd752826ee5d1a2b2f02a173dd5f69fa58602fc"
+      url "https://github.com/noborus/trdsql/releases/download/v0.13.0-rc7/trdsql_v0.13.0-rc7_linux_arm64.zip"
+      sha256 "be2ec32603790b145c816b5a96e11decc4e97ef8aa5cc21a6015eeb03def5e65"
       def install
         bin.install "trdsql"
       end
     end
 
     if Hardware::CPU.intel?
-      url "https://github.com/noborus/trdsql/releases/download/v0.12.1/trdsql_v0.12.1_linux_amd64.zip"
-      sha256 "984709b03980c034e77a0ce353839280b132f1b3770547d4533eb37f89a4a4d5"
+      url "https://github.com/noborus/trdsql/releases/download/v0.13.0-rc7/trdsql_v0.13.0-rc7_linux_amd64.zip"
+      sha256 "a7317da6cc907c6af4b04c31060ececb16d4459a8d42048790e8b793bff6fab1"
       def install
         bin.install "trdsql"
       end
