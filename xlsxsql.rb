@@ -5,20 +5,20 @@
 class Xlsxsql < Formula
   desc "Execute SQL to xlsx and convert to other format"
   homepage "https://github.com/noborus/xlsxsql"
-  version "0.2.0"
+  version "0.3.0"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/noborus/xlsxsql/releases/download/v0.2.0/xlsxsql_0.2.0_Darwin_x86_64.tar.gz"
-      sha256 "ecfa73b04772153f586f2f524cdbf131abf9f1ea63bab6720cd1b0e8bfdcd36c"
+    if Hardware::CPU.arm?
+      url "https://github.com/noborus/xlsxsql/releases/download/v0.3.0/xlsxsql_0.3.0_Darwin_arm64.tar.gz"
+      sha256 "6a05ea241282a0f99fbcc106577ede751a4e0910dfb89a600f4eaab4db3a1dd1"
 
       def install
         bin.install "xlsxsql"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/noborus/xlsxsql/releases/download/v0.2.0/xlsxsql_0.2.0_Darwin_arm64.tar.gz"
-      sha256 "6a03219c579a23226d0013a41ad197411a79de44df3f4a433c1fcf892476d614"
+    if Hardware::CPU.intel?
+      url "https://github.com/noborus/xlsxsql/releases/download/v0.3.0/xlsxsql_0.3.0_Darwin_x86_64.tar.gz"
+      sha256 "a31522a4cd20206deb231a51462d53d7cc6b20791bf54ecd3b56fe682ad8b7be"
 
       def install
         bin.install "xlsxsql"
@@ -27,17 +27,17 @@ class Xlsxsql < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/noborus/xlsxsql/releases/download/v0.2.0/xlsxsql_0.2.0_Linux_arm64.tar.gz"
-      sha256 "e8c6abb607c43a7f6f5c17bfe092f26228c7e5b6357c84ce7abc2f1c5e04b13e"
+    if Hardware::CPU.intel?
+      url "https://github.com/noborus/xlsxsql/releases/download/v0.3.0/xlsxsql_0.3.0_Linux_x86_64.tar.gz"
+      sha256 "a294340933307b07aef2c4675df6f2ebb1d3ad47294edaffc974298733c48389"
 
       def install
         bin.install "xlsxsql"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/noborus/xlsxsql/releases/download/v0.2.0/xlsxsql_0.2.0_Linux_x86_64.tar.gz"
-      sha256 "ba8786d75d8dab7a00d2251a73474781bc67a21eea81f9d517df7ab0fae706d8"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/noborus/xlsxsql/releases/download/v0.3.0/xlsxsql_0.3.0_Linux_arm64.tar.gz"
+      sha256 "1830d22411fec9a15634dbba7858b92d6eb0db099c8af4eb0a788179d32dd806"
 
       def install
         bin.install "xlsxsql"
