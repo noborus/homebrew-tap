@@ -1,19 +1,19 @@
 class Trdsql < Formula
   desc "Tools for executing SQL queries to CSV, LTSV, JSON and TBLN"
   homepage "https://github.com/noborus/trdsql/"
-  version  "0.13.0"
+  version  "0.20.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/noborus/trdsql/releases/download/v0.13.0/trdsql_v0.13.0_darwin_arm64.zip"
-      sha256 "890bacdc21d4c59cbb31bce062f364738b6b81f2a2eb65757ee85631a9e9ef7f"
+      url "https://github.com/noborus/trdsql/releases/download/v0.20.0/trdsql_v0.20.0_darwin_arm64.zip"
+      sha256 "92aaa507881cb0eb5cc15afe17a6ceddb0384bb45ab459bad3d7996b925761d3"
       def install
         bin.install "trdsql"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/noborus/trdsql/releases/download/v0.13.0/trdsql_v0.13.0_darwin_amd64.zip"
-      sha256 "88324d1fb2427debf95866f3722a59c2e54c925a3ef7fba95aeface2eb4b0d1c"
+      url "https://github.com/noborus/trdsql/releases/download/v0.20.0/trdsql_v0.20.0_darwin_amd64.zip"
+      sha256 "074e38f985430b6227fa58032ada8e999006f328ac6ff71ace36f5275f045906"
       def install
         bin.install "trdsql"
       end
@@ -22,16 +22,16 @@ class Trdsql < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/noborus/trdsql/releases/download/v0.13.0/trdsql_v0.13.0_linux_arm64.zip"
-      sha256 "6a3c771e805356cc0b35c8d692dc3ff77bb85db1a0cc51fe09dbb14b85188996"
+      url "https://github.com/noborus/trdsql/releases/download/v0.20.0/trdsql_v0.20.0_linux_arm64.zip"
+      sha256 "f5dcde015b123ad131825da5eb78e2edc3481a64cfff9b660bc89e940ac650bb"
       def install
         bin.install "trdsql"
       end
     end
 
     if Hardware::CPU.intel?
-      url "https://github.com/noborus/trdsql/releases/download/v0.13.0/trdsql_v0.13.0_linux_amd64.zip"
-      sha256 "94051dccd690a4fe6a1344563678d68503376d80a4a7c3a4c4a495b3b1f956f3"
+      url "https://github.com/noborus/trdsql/releases/download/v0.20.0/trdsql_v0.20.0_linux_amd64.zip"
+      sha256 "57b48e18daeba40e0bc0f6c7367a61263db5d0ac88cb1418002fc8866cb308e6"
       def install
         bin.install "trdsql"
       end
