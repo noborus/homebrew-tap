@@ -10,7 +10,7 @@ class Ov < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/noborus/ov/releases/download/v0.33.1-rc1/ov_0.33.1-rc1_darwin_amd64.zip"
-      sha256 "634eada0552c5b12e777201b4cdbdbae403452df3e38c3721c33c973cb124532"
+      sha256 "c6476ebc3b34b4b77bcc18b388a201458c83a10682d56cec336d96846d316180"
 
       def install
         bin.install "ov"
@@ -18,7 +18,7 @@ class Ov < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/noborus/ov/releases/download/v0.33.1-rc1/ov_0.33.1-rc1_darwin_arm64.zip"
-      sha256 "352fb45a0bb601cc25284417fc75eed9cda63a1a75e659c9aa0aa1a359660ba3"
+      sha256 "febdb7807eeaf8188d901f62eeeb2d7afeb1cc05c66931371417507c5139d9b0"
 
       def install
         bin.install "ov"
@@ -27,9 +27,17 @@ class Ov < Formula
   end
 
   on_linux do
+    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
+      url "https://github.com/noborus/ov/releases/download/v0.33.1-rc1/ov_0.33.1-rc1_linux_arm.zip"
+      sha256 "f42de76f3acb6eb6b1870624813af40e327b207086ee2b24edd9d294e75e0568"
+
+      def install
+        bin.install "ov"
+      end
+    end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/noborus/ov/releases/download/v0.33.1-rc1/ov_0.33.1-rc1_linux_arm64.zip"
-      sha256 "a657d3bc031c2d338ec09d42e22e5a468bda813af285bcaa773a934911f0743b"
+      sha256 "bc8d62d387545d400a29f17cf84cdced93b8d3a9700ec106bc42176866ee1175"
 
       def install
         bin.install "ov"
@@ -37,15 +45,7 @@ class Ov < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/noborus/ov/releases/download/v0.33.1-rc1/ov_0.33.1-rc1_linux_amd64.zip"
-      sha256 "d21b770e1e63e9ad63649cf29db943d1d476a6de5995a93652aa82184311515c"
-
-      def install
-        bin.install "ov"
-      end
-    end
-    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/noborus/ov/releases/download/v0.33.1-rc1/ov_0.33.1-rc1_linux_arm.zip"
-      sha256 "20e9423148258d0016ea21a5cc1d1119d0bcbb098777df6588d3aad03812d7e6"
+      sha256 "cb7a0e27ba42e3ca0a1a95fc2ba5d287ffeeeedff2c39c6460131bd52965349c"
 
       def install
         bin.install "ov"
