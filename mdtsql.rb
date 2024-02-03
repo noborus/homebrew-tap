@@ -5,20 +5,20 @@
 class Mdtsql < Formula
   desc "Execute SQL to markdown table and convert to other format"
   homepage "https://github.com/noborus/mdtsql"
-  version "0.0.6"
+  version "0.1.0"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/noborus/mdtsql/releases/download/v0.0.6/mdtsql_Darwin_x86_64.tar.gz"
-      sha256 "8ee54def7cb9b05abd14e36d25d02bc7aeb4054709f03d17253867b1560f0db2"
+    if Hardware::CPU.arm?
+      url "https://github.com/noborus/mdtsql/releases/download/v0.1.0/mdtsql_0.1.0_Darwin_arm64.tar.gz"
+      sha256 "71a43b93aae52b0edb4de3a1a40dcf6c40748be722e336e8ce2bdf6709a24d79"
 
       def install
         bin.install "mdtsql"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/noborus/mdtsql/releases/download/v0.0.6/mdtsql_Darwin_arm64.tar.gz"
-      sha256 "67180e6bfe986ca5c908cefa6e43cb158b8c4f31afe3cb2ddf13cdb3703305fc"
+    if Hardware::CPU.intel?
+      url "https://github.com/noborus/mdtsql/releases/download/v0.1.0/mdtsql_0.1.0_Darwin_x86_64.tar.gz"
+      sha256 "dd09768d0c2ecbe8e1c1e424112cf50afdec754e0518b6772e0b4155ce3a2704"
 
       def install
         bin.install "mdtsql"
@@ -28,16 +28,16 @@ class Mdtsql < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/noborus/mdtsql/releases/download/v0.0.6/mdtsql_Linux_arm64.tar.gz"
-      sha256 "ec8690bad0e2c0f2d79cf7395366e6a3d04742952613c257f4aee9f666b74dc1"
+      url "https://github.com/noborus/mdtsql/releases/download/v0.1.0/mdtsql_0.1.0_Linux_arm64.tar.gz"
+      sha256 "ceca8f52e4026a06fd4f2be101e649b958f2e99c898fd80508a32bc4924d8476"
 
       def install
         bin.install "mdtsql"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/noborus/mdtsql/releases/download/v0.0.6/mdtsql_Linux_x86_64.tar.gz"
-      sha256 "feeca8eebc12cd07038cab255d086123ed6212be95d717f0be02d047ced64082"
+      url "https://github.com/noborus/mdtsql/releases/download/v0.1.0/mdtsql_0.1.0_Linux_x86_64.tar.gz"
+      sha256 "0911dab1c834ac0a863f22aa91c7718b725af7962aae537fdbb301b9f71e43a2"
 
       def install
         bin.install "mdtsql"
