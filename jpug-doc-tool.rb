@@ -5,20 +5,20 @@
 class JpugDocTool < Formula
   desc "jpug-doc tool"
   homepage "https://github.com/noborus/jpug-doc-tool"
-  version "0.3.1"
+  version "0.4.0"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/noborus/jpug-doc-tool/releases/download/v0.3.1/jpug-doc-tool_0.3.1_darwin_amd64.tar.gz"
-      sha256 "07c909bc759a5f689306f09bce3d50174fac232fbc26501fce47cd6afdb1f2b2"
+    if Hardware::CPU.arm?
+      url "https://github.com/noborus/jpug-doc-tool/releases/download/v0.4.0/jpug-doc-tool_0.4.0_darwin_arm64.tar.gz"
+      sha256 "7b45554da4c0fcd5dfdd022803828f21a6f0e5f737c572190f3174064e57e7c1"
 
       def install
         bin.install "jpug-doc-tool"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/noborus/jpug-doc-tool/releases/download/v0.3.1/jpug-doc-tool_0.3.1_darwin_arm64.tar.gz"
-      sha256 "f10263f2ddd4baff2928712c92ef5a8031c44694386fd3f6e47db915f92aa344"
+    if Hardware::CPU.intel?
+      url "https://github.com/noborus/jpug-doc-tool/releases/download/v0.4.0/jpug-doc-tool_0.4.0_darwin_amd64.tar.gz"
+      sha256 "26d002807db31f4404e63238860f597459cb0b9ae971410a02c20ed7c3205983"
 
       def install
         bin.install "jpug-doc-tool"
@@ -28,16 +28,16 @@ class JpugDocTool < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/noborus/jpug-doc-tool/releases/download/v0.3.1/jpug-doc-tool_0.3.1_linux_arm64.tar.gz"
-      sha256 "82889adfc5538b4d86807aba93aa9501315cd6740996bb942703f216a33138de"
+      url "https://github.com/noborus/jpug-doc-tool/releases/download/v0.4.0/jpug-doc-tool_0.4.0_linux_arm64.tar.gz"
+      sha256 "b253775c2bef97b7a8ccc250eda365acd23e41621c6e659f949efe12fbef215b"
 
       def install
         bin.install "jpug-doc-tool"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/noborus/jpug-doc-tool/releases/download/v0.3.1/jpug-doc-tool_0.3.1_linux_amd64.tar.gz"
-      sha256 "f4e7873aa39cd5a57d68c4098a2e53bc8d225935a983f98fb6375d432c8c70fe"
+      url "https://github.com/noborus/jpug-doc-tool/releases/download/v0.4.0/jpug-doc-tool_0.4.0_linux_amd64.tar.gz"
+      sha256 "f8c03a2e1ffda93fb074c92aeedc7b8729dbcb9ccd306ff5367f91944a96dba5"
 
       def install
         bin.install "jpug-doc-tool"
