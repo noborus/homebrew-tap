@@ -1,19 +1,19 @@
 class Trdsql < Formula
   desc "Tools for executing SQL queries to CSV, LTSV, JSON and TBLN"
   homepage "https://github.com/noborus/trdsql/"
-  version  "0.20.0"
+  version  "1.0.0-alpha-1"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/noborus/trdsql/releases/download/v0.20.0/trdsql_v0.20.0_darwin_arm64.zip"
-      sha256 "92aaa507881cb0eb5cc15afe17a6ceddb0384bb45ab459bad3d7996b925761d3"
+      url "https://github.com/noborus/trdsql/releases/download/v1.0.0-alpha-1/trdsql_v1.0.0-alpha-1_darwin_arm64.zip"
+      sha256 "ddbccafad299c6bd3ca30516b9d300dd976d327e1d9b152170d7c3e30160759b"
       def install
         bin.install "trdsql"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/noborus/trdsql/releases/download/v0.20.0/trdsql_v0.20.0_darwin_amd64.zip"
-      sha256 "074e38f985430b6227fa58032ada8e999006f328ac6ff71ace36f5275f045906"
+      url "https://github.com/noborus/trdsql/releases/download/v1.0.0-alpha-1/trdsql_v1.0.0-alpha-1_darwin_amd64.zip"
+      sha256 "0d901773c508ff8b044126b0be40ba0ca0c2cb230e65d99327dffa3303d4f949"
       def install
         bin.install "trdsql"
       end
@@ -22,16 +22,16 @@ class Trdsql < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/noborus/trdsql/releases/download/v0.20.0/trdsql_v0.20.0_linux_arm64.zip"
-      sha256 "f5dcde015b123ad131825da5eb78e2edc3481a64cfff9b660bc89e940ac650bb"
+      url "https://github.com/noborus/trdsql/releases/download/v1.0.0-alpha-1/trdsql_v1.0.0-alpha-1_linux_arm64.zip"
+      sha256 "8fce59775c6054cb42e8ff580512467ce98b834b538e66738def22fe23ebbbb1"
       def install
         bin.install "trdsql"
       end
     end
 
     if Hardware::CPU.intel?
-      url "https://github.com/noborus/trdsql/releases/download/v0.20.0/trdsql_v0.20.0_linux_amd64.zip"
-      sha256 "57b48e18daeba40e0bc0f6c7367a61263db5d0ac88cb1418002fc8866cb308e6"
+      url "https://github.com/noborus/trdsql/releases/download/v1.0.0-alpha-1/trdsql_v1.0.0-alpha-1_linux_amd64.zip"
+      sha256 "ecd2ac7ac20732aac3a01c5964c7f03b6889beb47ebb08e83a21018508a9d71c"
       def install
         bin.install "trdsql"
       end
