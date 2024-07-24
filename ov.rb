@@ -5,20 +5,20 @@
 class Ov < Formula
   desc "Feature rich terminal pager"
   homepage "https://github.com/noborus/ov"
-  version "0.35.0"
+  version "0.36.0"
 
   on_macos do
     on_intel do
-      url "https://github.com/noborus/ov/releases/download/v0.35.0/ov_0.35.0_darwin_amd64.zip"
-      sha256 "5f49575552371fc0f70a39cd689f2bb8c1b7e23b8393854770e1357cb6f4b4b0"
+      url "https://github.com/noborus/ov/releases/download/v0.36.0/ov_0.36.0_darwin_amd64.zip"
+      sha256 "04488cf12cda707f78224e0dac992c54d9256ccdc7e171feeae8913fa0112fda"
 
       def install
         bin.install "ov"
       end
     end
     on_arm do
-      url "https://github.com/noborus/ov/releases/download/v0.35.0/ov_0.35.0_darwin_arm64.zip"
-      sha256 "d2d7a703b6d8503d2d349ff4e24929520ce32ca91ce6c1ed00a93ca057304830"
+      url "https://github.com/noborus/ov/releases/download/v0.36.0/ov_0.36.0_darwin_arm64.zip"
+      sha256 "8a69dba2ea56d7f396ca75df266a393f57ae5b66d13a56f88a1c19a2f459ed6d"
 
       def install
         bin.install "ov"
@@ -29,8 +29,8 @@ class Ov < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/noborus/ov/releases/download/v0.35.0/ov_0.35.0_linux_amd64.zip"
-        sha256 "d1f7da4f3a2f3af558f3d35e983233400bcd74a95774b86c3de8a69748ddd064"
+        url "https://github.com/noborus/ov/releases/download/v0.36.0/ov_0.36.0_linux_amd64.zip"
+        sha256 "888ac987ae4b3521b0bfaaafcdf2ce7ec09419568a089ef116ffacafdd5b0408"
 
         def install
           bin.install "ov"
@@ -39,8 +39,8 @@ class Ov < Formula
     end
     on_arm do
       if !Hardware::CPU.is_64_bit?
-        url "https://github.com/noborus/ov/releases/download/v0.35.0/ov_0.35.0_linux_arm.zip"
-        sha256 "05e5f887b4e9a526b98a428ed6eab5c8b1b074e2fad9d3794bd4311713ecb737"
+        url "https://github.com/noborus/ov/releases/download/v0.36.0/ov_0.36.0_linux_arm.zip"
+        sha256 "573775b7ef991679ac6d7e24997ee19a7b00d64eec304573ac2c10213fcb563f"
 
         def install
           bin.install "ov"
@@ -49,8 +49,8 @@ class Ov < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/noborus/ov/releases/download/v0.35.0/ov_0.35.0_linux_arm64.zip"
-        sha256 "7dedabae125be6c95bd6afcd60723d31a7d32f75d7dc3506045dbb87fa52f795"
+        url "https://github.com/noborus/ov/releases/download/v0.36.0/ov_0.36.0_linux_arm64.zip"
+        sha256 "8cb262c683a4a04fafaba05df9c330fe1250d67c2059ad9b9faa0d68b320435f"
 
         def install
           bin.install "ov"
