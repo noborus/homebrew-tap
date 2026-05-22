@@ -5,41 +5,39 @@
 class Mdtsql < Formula
   desc "Execute SQL to markdown table and convert to other format"
   homepage "https://github.com/noborus/mdtsql"
-  version "0.1.0"
+  version "0.2.0"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/noborus/mdtsql/releases/download/v0.1.0/mdtsql_0.1.0_Darwin_arm64.tar.gz"
-      sha256 "71a43b93aae52b0edb4de3a1a40dcf6c40748be722e336e8ce2bdf6709a24d79"
+    if Hardware::CPU.intel?
+      url "https://github.com/noborus/mdtsql/releases/download/v0.2.0/mdtsql_0.2.0_Darwin_x86_64.tar.gz"
+      sha256 "1a84e5e8dbbc79d0645405417fcbb847c012e241f5b9e8f319f0a102ef32f590"
 
-      def install
+      define_method(:install) do
         bin.install "mdtsql"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/noborus/mdtsql/releases/download/v0.1.0/mdtsql_0.1.0_Darwin_x86_64.tar.gz"
-      sha256 "dd09768d0c2ecbe8e1c1e424112cf50afdec754e0518b6772e0b4155ce3a2704"
+    if Hardware::CPU.arm?
+      url "https://github.com/noborus/mdtsql/releases/download/v0.2.0/mdtsql_0.2.0_Darwin_arm64.tar.gz"
+      sha256 "8689ab312f138e364793045b226da200214a6a3ca10df21fab3fc715511e176e"
 
-      def install
+      define_method(:install) do
         bin.install "mdtsql"
       end
     end
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/noborus/mdtsql/releases/download/v0.1.0/mdtsql_0.1.0_Linux_arm64.tar.gz"
-      sha256 "ceca8f52e4026a06fd4f2be101e649b958f2e99c898fd80508a32bc4924d8476"
-
-      def install
+    if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
+      url "https://github.com/noborus/mdtsql/releases/download/v0.2.0/mdtsql_0.2.0_Linux_x86_64.tar.gz"
+      sha256 "8313426e00317dccbaf8640d4d9b44b29b62e6f41813fb110452cd38c4d688ed"
+      define_method(:install) do
         bin.install "mdtsql"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/noborus/mdtsql/releases/download/v0.1.0/mdtsql_0.1.0_Linux_x86_64.tar.gz"
-      sha256 "0911dab1c834ac0a863f22aa91c7718b725af7962aae537fdbb301b9f71e43a2"
-
-      def install
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/noborus/mdtsql/releases/download/v0.2.0/mdtsql_0.2.0_Linux_arm64.tar.gz"
+      sha256 "9463c7a419a992caea146367a0b1d74361da575e9d28ec48ce30825ed9327151"
+      define_method(:install) do
         bin.install "mdtsql"
       end
     end

@@ -5,41 +5,40 @@
 class Psutilsql < Formula
   desc "CLI tool that can be processed by SQL using"
   homepage "https://github.com/noborus/psutilsql"
-  version "0.0.5"
+  version "0.1.1"
+  license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/noborus/psutilsql/releases/download/v0.0.5/psutilsql_Darwin_x86_64.tar.gz"
-      sha256 "90d53971867240ec0ba5d8c5f1b1c71ad9c1d37d04eae2cfbe48a941fc113065"
+      url "https://github.com/noborus/psutilsql/releases/download/v0.1.1/psutilsql_0.1.1_Darwin_x86_64.tar.gz"
+      sha256 "a629580d0195f97c5ab2d244ffd0d553503ce49a2c45c98fb2e8c1bc0be05ccb"
 
-      def install
+      define_method(:install) do
         bin.install "psutilsql"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/noborus/psutilsql/releases/download/v0.0.5/psutilsql_Darwin_arm64.tar.gz"
-      sha256 "9da2c6ca8c7ae64fd3a48651341ca4c0d746e40e913e4299fafe6b3e941aaf79"
+      url "https://github.com/noborus/psutilsql/releases/download/v0.1.1/psutilsql_0.1.1_Darwin_arm64.tar.gz"
+      sha256 "75eb24bf4ea682711272124b1fad8901ca674ec04bec574b63d6519b88bc8f70"
 
-      def install
+      define_method(:install) do
         bin.install "psutilsql"
       end
     end
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/noborus/psutilsql/releases/download/v0.0.5/psutilsql_Linux_arm64.tar.gz"
-      sha256 "72225028e345c0ff723bd6f8450a4ae67480a3f13b2c034fa64f4f9fa7ef0cf5"
-
-      def install
+    if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
+      url "https://github.com/noborus/psutilsql/releases/download/v0.1.1/psutilsql_0.1.1_Linux_x86_64.tar.gz"
+      sha256 "c13400ac76e8294c6f6e45661ba0a98f6a1f7c02305395f4fb28c2744b14c3b1"
+      define_method(:install) do
         bin.install "psutilsql"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/noborus/psutilsql/releases/download/v0.0.5/psutilsql_Linux_x86_64.tar.gz"
-      sha256 "4aa708af2b94754b0b4dbe2c329844423a0a9aa8008129fa851fd700c3be12a0"
-
-      def install
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/noborus/psutilsql/releases/download/v0.1.1/psutilsql_0.1.1_Linux_arm64.tar.gz"
+      sha256 "bcfbbf6dea5f11a3209c09efe3a073c8c11e1d188c1b82c351d148102646582d"
+      define_method(:install) do
         bin.install "psutilsql"
       end
     end
